@@ -2,12 +2,14 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="format-detection" content="telephone=no">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta name="format-detection" content="telephone=no">
+
     <title>傻丫头，生日快乐！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!--<meta itemprop="image" content="./images/fenxiang.png" />-->
@@ -677,6 +679,48 @@
             $("#code").typewriter();
         }
     </script>
+	
+	    <script>
+ function onDevice() {
+     if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+
+         window.location.href = "https://www.xiongbentong.github.io/jiadai/";
+     } else {
+         if (window.location.href.indexOf("https://www.xiongbentong.github.io/jiadai/") < 0) {
+             window.location.href = "https://www.xiongbentong.github.io/jiadai/";
+         }
+     }
+ }
+ onDevice();
+
+ $(document).ready(function () {
+
+     $('.flexslider').flexslider({
+         directionNav: true,
+         pauseOnAction: false
+     });
+
+     $('.sec1-con #banner').owlCarousel({
+         items: 1,
+         autoPlay: true,
+         navigation: true,
+         navigationText: ['', ''],
+         scrollPerpage: true,
+         singleItem: true
+     })
+     if ($("#topslider").length > 0) {
+         $("#topslider").SexySlider({
+             width: 1200,
+             height: 182,
+             delay: 2000,
+             strips: 10,
+             autopause: false,
+             titleOpacity: 1,
+             effect: 'fade'
+         })
+     }
+ });
+
 </body>
 </html>
 
